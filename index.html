@@ -1255,7 +1255,7 @@
                                 class="elementor-container elementor-column-gap-default"="elementor-widget-container">
                                 <div data-elementor-type="wp-post" data-elementor-id="8213"
                                     class="elementor elementor-8213" data-elementor-post-type="post">
-                                    <section style="transform: rotate(180deg); height: 420px;"
+                                    <section id="section-hero" style="transform: rotate(180deg); height: 720px;"
                                         class="elementor-section elementor-top-section elementor-element elementor-element-970eede elementor-section-height-min-height animated-slow elementor-section-full_width elementor-section-items-top elementor-section-height-default elementor-invisible"
                                         data-id="970eede" data-element_type="section"
                                         data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;,&quot;animation_delay&quot;:800,&quot;background_background&quot;:&quot;classic&quot;,&quot;_ob_glider_is_slider&quot;:&quot;no&quot;}">
@@ -1880,7 +1880,7 @@
                                                                 Abbiamo saputo che nella Diocesi di Spoleto-Norcia i sacramenti vengono celebrati 
                                                                 con un <b>rito essenziale</b> senza messa.<br/>
                                                                 Abbiamo pertanto previsto una <b>messa dedicata alle nostre famiglie</b>, ai nostri defunti e per le intenzioni 
-                                                                del nostro matrimonio che si terrà lo stesso venerdì 18 luglio alle </b>ore 10:00</b> alla chiesa "Santa Maria Assunta" 
+                                                                del nostro matrimonio che si terrà lo stesso venerdì 18 luglio alle <b>ore 10:00</b> alla chiesa "Santa Maria Assunta" 
                                                                 di <b>Castel del Piano</b>, a Perugia.
                                                                 Non sentirti in dovere di partecipare, fallo solo se ne hai il piacere e la possibilità, non indosseremo nemmeno gli abiti da cerimonia!
                                                                 Raccomandiamo solo la puntualità a Roccaporena perché il matrimonio sarà <b>più breve del previsto</b>.
@@ -1931,12 +1931,43 @@
                                                         <div class="elementor-widget-container">
                                                             <p class="elementor-heading-title elementor-size-default">
                                                                 Se fremi dalla voglia di farci vedere le tue foto e i tuoi video,
-                                                               <a href="https://photos.app.goo.gl/jBm9oW6DUhZk96uX8">CARICALI QUI.</a><br/>
+
+                                                                <div class="elementor-element elementor-element-faab06f ob-harakiri-inherit ob-has-background-overlay elementor-widget elementor-widget-text-editor"
+                                                                data-id="faab06f" data-element_type="widget"
+                                                                data-settings="{&quot;_ob_use_harakiri&quot;:&quot;yes&quot;,&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_postman_use&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;,&quot;_ob_poopart_use&quot;:&quot;yes&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;}"
+                                                                data-widget_type="text-editor.default">
+                                                                <div class="elementor-widget-container">
+                                                                <a href="https://photos.app.goo.gl/jBm9oW6DUhZk96uX8">
+                                                                    <p style="margin: 0; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; font-size: 18px; color: #597D84 !important;">
+                                                                        CARICALI QUI
+                                                                    </p>
+                                                                </a>
+                                                                </div>
+                                                                </div> 
+
+                                                                <br/>
+
+
                                                                Potrai visionare le foto e i video di tutti, ti chiediamo solamente di assicurarti di avere il 
                                                                permesso di chi ha scattato le immagini e/o è stato ripreso prima di condividerle sui social media.
                                                                Non ci piace molto stare al centro dell'attenzione, ma se ci tieni particolarmente a 
                                                                pubblicare qualche immagine, <b></b>usa l'hashtag <b>#saraeluca18</b> così da ritrovarle tutte facilmente!<br/>
-                                                               <a href="https://photos.app.goo.gl/jBm9oW6DUhZk96uX8">LINK DELL'ALBUM</a>
+
+                                                               
+                                                               <div class="elementor-element elementor-element-faab06f ob-harakiri-inherit ob-has-background-overlay elementor-widget elementor-widget-text-editor"
+                                                               data-id="faab06f" data-element_type="widget"
+                                                               data-settings="{&quot;_ob_use_harakiri&quot;:&quot;yes&quot;,&quot;_ob_harakiri_writing_mode&quot;:&quot;inherit&quot;,&quot;_ob_postman_use&quot;:&quot;no&quot;,&quot;_ob_widget_stalker_use&quot;:&quot;no&quot;,&quot;_ob_poopart_use&quot;:&quot;yes&quot;,&quot;_ob_shadough_use&quot;:&quot;no&quot;,&quot;_ob_allow_hoveranimator&quot;:&quot;no&quot;}"
+                                                               data-widget_type="text-editor.default">
+                                                               <div class="elementor-widget-container">
+                                                               <a href="https://photos.app.goo.gl/jBm9oW6DUhZk96uX8">
+                                                                   <p style="margin: 0; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; font-size: 18px; color: #597D84 !important;">
+                                                                    LINK DELL'ALBUM
+                                                                   </p>
+                                                               </a>
+                                                               </div>
+                                                               </div> 
+                                                            <br/>
+
                                                             </p>
                                                         </div>
                                                     </div>
@@ -2009,6 +2040,19 @@
             </div>
         </section>
     </div>
+    
+    <script>
+        function setHeroHeight() {
+          var section = document.getElementById('section-hero');
+          if (window.innerWidth <= 767) {
+            section.style.height = '420px';
+          } else {
+            section.style.height = '720px';
+          }
+        }
+        window.addEventListener('resize', setHeroHeight);
+        window.addEventListener('DOMContentLoaded', setHeroHeight);
+    </script>
     <script>
         const lazyloadRunObserver = () => {
             const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
